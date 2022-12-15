@@ -33,6 +33,8 @@ $app->get('/testbot/', function (Request $request, Response $response, array $ar
     ControllerApiTelegram::sendMessage("teste chatbot de isaac");
     
     $response->getBody()->write("Enviando mensagem para o chatbot!");
+
+    return $response;
 });
 
 $app->run();
