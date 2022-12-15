@@ -32,7 +32,7 @@ class ControllerApiTelegram extends ControllerApiBase {
         return $oBotApi->sendMessage($telegram_chat_id, $message);
     }
 
-    public static function sendMessage($message, $telegram_chat_id = 9999999){
+    public static function sendMessage($message, $telegram_chat_id = 5739605956){
         // instancia do bot com o token gerado
         $oBotApi = new BotApi(self::TELEGRAM_BOT_TOKEN);
         
