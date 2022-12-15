@@ -18,7 +18,7 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
     return $response;
 });
 
-$app->get('/hello', function (Request $request, Response $response, array $args) {
+$app->get('/hello/', function (Request $request, Response $response, array $args) {
     $response->getBody()->write("Hello World!");
 
     return $response;
@@ -30,7 +30,7 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     return $response;
 });
 
-$app->get('/testbot', function (Request $request, Response $response, array $args) {
+$app->get('/testbot/', function (Request $request, Response $response, array $args) {
     
     require_once ("controllers/ControllerApiTelegram.php");
     
