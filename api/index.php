@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Factory\AppFactory;
@@ -28,7 +30,7 @@ $app->get('/testbot', function (Request $request, Response $response, array $arg
     
     require_once ("controllers/ControllerApiTelegram.php");
     
-    ControllerApiTelegram::sendMessage("Informe seu CPF para iniciar a conversa! Senac - Testes");
+    ControllerApiTelegram::sendMessage("Testes");
     
     $response->getBody()->write("Enviando mensagem para o chatbot!");
 });
